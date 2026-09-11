@@ -7,7 +7,7 @@ import '../responsive.css'
 import '../sections.css'
 
 gsap.registerPlugin(ScrollTrigger)
-const Arrow = () => <span aria-hidden="true">↗</span>
+const Arrow = () => <span aria-hidden="true">↗︎</span>
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
 const nav = [
   ['Menu', '/menu'],
@@ -147,7 +147,7 @@ function Navbar() {
           aria-controls="mobile-nav"
           onClick={() => setOpen(!open)}
         >
-          {open ? '✕' : '☰'}
+          {open ? '✕︎' : '☰'}
         </button>
       </div>
       {open && (
@@ -184,7 +184,7 @@ function Hero() {
           <i /> FAMILY-RUN SINCE 2011
         </span>
         <span>
-          PROUDLY CANADIAN <span className="maple">✦</span>
+          PROUDLY CANADIAN <span className="maple">✦︎</span>
         </span>
       </div>
       <h1 id="hero-title">
@@ -217,12 +217,12 @@ function Hero() {
           Order now <Arrow />
         </a>
         <a href="#" className="text-link">
-          Explore the menu <span>→</span>
+          Explore the menu <span>→︎</span>
         </a>
       </div>
       <div className="hero-note">
         <span className="drawn-arrow" aria-hidden="true">
-          ⤴
+          ⤴︎
         </span>
         Fresh, homemade,
         <br />
@@ -231,7 +231,7 @@ function Hero() {
       <div className="hero-bottom">
         <span>WELCOME TO SAM’S GRILL</span>
         <a href="#">
-          GOOD FOOD AHEAD <span>↓</span>
+          GOOD FOOD AHEAD <span>↓︎</span>
         </a>
       </div>
     </section>
@@ -282,7 +282,7 @@ function AboutSams() {
           </div>
           <div>
             <strong>
-              4.4<i aria-hidden="true">★</i>
+              4.4<i aria-hidden="true">★︎</i>
             </strong>
             <span>live Google ratings, store by store, unedited</span>
           </div>
@@ -305,13 +305,11 @@ function VideoSection() {
         <div className="video-intro">
           <span className="eyebrow">WATCH SAM’S GRILL</span>
           <h2 id="video-title">
-            Tastes like
-            <br />
+            Tastes like <br />
             home.
             <br />
             <span className="red">
-              Grows like
-              <br />
+              Grows like <br />
               Canada.
             </span>
           </h2>
@@ -321,7 +319,7 @@ function VideoSection() {
             Proudly Canadian.
           </p>
           <span className="video-intro-arrow" aria-hidden="true">
-            ↗
+            ↗︎
           </span>
         </div>
         <div className="video-player-area">
@@ -347,7 +345,7 @@ function VideoSection() {
                   loading="lazy"
                 />
                 <span className="video-play" aria-hidden="true">
-                  ▶
+                  ▶︎
                 </span>
               </button>
             )}
@@ -370,7 +368,7 @@ function VideoSection() {
                 className="video-watch text-link"
                 onClick={() => setPlaying(true)}
               >
-                Watch now <span aria-hidden="true">▶</span>
+                Watch now <span aria-hidden="true">▶︎</span>
               </button>
             )}
           </div>
@@ -499,7 +497,7 @@ function WhySams() {
             alt="Classic poutine with fresh-cut fries, real cheese curds and hot gravy"
             loading="lazy"
           />
-          <span className="photo-label">REAL QUÉBEC CHEESE CURDS ↗</span>
+          <span className="photo-label">REAL QUÉBEC CHEESE CURDS ↗︎</span>
         </div>
       </div>
       <div className="why-details">
@@ -531,7 +529,7 @@ function WhySams() {
               <h3>{title}</h3>
               <p>{body}</p>
             </div>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗︎</span>
           </div>
         ))}
         <a href="#" className="text-link">
@@ -581,7 +579,7 @@ function Testimonials() {
             </svg>
             Google reviews
             <strong>
-              4.4<i aria-hidden="true">★</i>
+              4.4<i aria-hidden="true">★︎</i>
             </strong>
           </p>
           <span className="review-mark" aria-hidden="true">
@@ -612,14 +610,14 @@ function Testimonials() {
                 aria-label="Previous review"
                 onClick={() => setActive((active + 2) % 3)}
               >
-                ←
+                ←︎
               </button>
               <button
                 className="circle-button circle-button-next"
                 aria-label="Next review"
                 onClick={() => setActive((active + 1) % 3)}
               >
-                →
+                →︎
               </button>
             </div>
           </div>
@@ -799,8 +797,8 @@ function Footer() {
               ON N1R 8K5
             </p>
             <div className="flex gap-4">
-              <a href="#">Instagram ↗</a>
-              <a href="#">Facebook ↗</a>
+              <a href="#">Instagram ↗︎</a>
+              <a href="#">Facebook ↗︎</a>
             </div>
           </div>
         </div>
@@ -996,7 +994,7 @@ function Home() {
                 {brandItems.map((item) => (
                   <span className="brand-strip-item" key={item}>
                     <span>{item}</span>
-                    <b aria-hidden="true">✦</b>
+                    <b aria-hidden="true">✦︎</b>
                   </span>
                 ))}
               </span>
