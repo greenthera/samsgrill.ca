@@ -324,6 +324,12 @@
 
   .contact-visual-wrap {
     width: min(80%, 360px);
+    margin-top: 55px;
+    margin-bottom: 20px;
+  }
+
+  .contact-visual-bg {
+    width: 120%;
   }
 }
 
