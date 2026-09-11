@@ -1,0 +1,232 @@
+/* Shared section rhythm; the hero retains its established composition. */
+:root {
+  --section-space: clamp(56px, 6vw, 88px);
+  --content-gap: clamp(28px, 3vw, 44px);
+}
+
+.section-pad {
+  padding-block: var(--section-space);
+}
+
+.section-heading,
+.review-top {
+  margin-bottom: var(--content-gap);
+}
+
+.section-heading h2,
+.food-copy h3 {
+  text-wrap: balance;
+}
+
+.products {
+  padding-bottom: 0;
+}
+
+.food-feature,
+.food-stage {
+  min-height: clamp(380px, 34vw, 480px);
+}
+
+.food-stage {
+  padding-block: 40px;
+}
+
+.food-art img {
+  height: clamp(290px, 28vw, 390px);
+}
+
+.food-copy {
+  padding-block: 40px;
+}
+
+.food-copy .eyebrow {
+  margin-bottom: 16px;
+}
+
+.food-copy p {
+  margin-top: 20px;
+}
+
+.food-copy .text-link {
+  margin-top: 24px;
+}
+
+.food-index {
+  bottom: 20px;
+}
+
+.why,
+.review-layout,
+.extras {
+  gap: clamp(32px, 5vw, 72px);
+}
+
+.poutine-photo {
+  margin-top: 32px;
+}
+
+.story-copy {
+  margin-bottom: 28px;
+}
+
+.reason {
+  padding-block: 22px;
+}
+
+.review-content blockquote {
+  min-height: 0;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-author {
+  margin-top: 28px;
+}
+
+.review-controls {
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+.town-grid {
+  margin-top: 0;
+}
+
+.locations-bottom {
+  margin-top: 32px;
+}
+
+.local-news {
+  padding-top: 0;
+}
+
+.newsletter {
+  margin-top: 28px;
+  padding-top: 28px;
+}
+
+.catering {
+  min-height: 520px;
+}
+
+.catering>div {
+  padding: clamp(28px, 3vw, 42px);
+}
+
+.footer-bottom {
+  margin-top: 36px;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --section-space: 48px;
+    --content-gap: 28px;
+  }
+
+  .section-heading {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .food-feature,
+  .food-feature:nth-child(even) {
+    min-height: 0;
+    padding-bottom: 32px;
+  }
+
+  .food-stage {
+    min-height: 0;
+    height: clamp(270px, 75vw, 340px);
+    padding-block: 28px;
+  }
+
+  .food-art {
+    margin-top: 8px;
+  }
+
+  .food-art img {
+    height: clamp(225px, 65vw, 290px);
+  }
+
+  .food-index {
+    bottom: 8px;
+  }
+
+  .food-copy,
+  .food-feature:nth-child(even) .food-copy {
+    padding: 24px 8% 0;
+  }
+
+  .food-copy .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .food-copy p {
+    margin-top: 16px;
+  }
+
+  .food-copy .text-link {
+    margin-top: 20px;
+  }
+
+  .why,
+  .review-layout,
+  .extras {
+    gap: 32px;
+  }
+
+  .poutine-photo {
+    height: clamp(260px, 75vw, 330px);
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .reason {
+    padding-block: 20px;
+  }
+
+  .review-top {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .review-author,
+  .review-controls {
+    margin-top: 24px;
+  }
+
+  .town-grid {
+    column-gap: 20px;
+  }
+
+  .locations-bottom {
+    margin-top: 28px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .catering {
+    min-height: 490px;
+  }
+
+  .local-news>.eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .final-cta {
+    min-height: 540px;
+  }
+
+  .footer-main {
+    row-gap: 28px;
+  }
+
+  .footer-bottom {
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+}
