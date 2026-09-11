@@ -16,6 +16,12 @@ const nav = [
   ['Partners', '/franchising'],
   ['Contact', '/contact-us'],
 ]
+const brandItems = [
+  'HAND-PRESSED BURGERS',
+  'FRESH-CUT FRIES',
+  'REAL QUÉBEC CURDS',
+  'PROUDLY CANADIAN',
+]
 const products = [
   {
     name: 'Super Burger',
@@ -207,7 +213,7 @@ function Hero() {
           Hand-pressed burgers, real Québec-curd poutine and golden fresh-cut
           fries — fresh, homemade, extraordinarily delicious.
         </p>
-        <a href="#" className="button">
+        <a href="#" className="button small">
           Order now <Arrow />
         </a>
         <a href="#" className="text-link">
@@ -265,6 +271,22 @@ function AboutSams() {
           the whole table can share, and a room where a kid's birthday and a
           farmer's lunch break happen side by side.
         </p>
+        <div className="about-stats">
+          <div>
+            <strong>{towns.length}</strong>
+            <span>towns open</span>
+          </div>
+          <div>
+            <strong>41+</strong>
+            <span>menu items built on Canadian originals</span>
+          </div>
+          <div>
+            <strong>
+              4.4<i aria-hidden="true">★</i>
+            </strong>
+            <span>live Google ratings, store by store, unedited</span>
+          </div>
+        </div>
         <a href="#" className="text-link">
           Our story <Arrow />
         </a>
@@ -320,15 +342,12 @@ function VideoSection() {
                 aria-label="Play the Sam’s Grill video"
               >
                 <img
-                  src={asset('images/video-preview.jpg')}
-                  alt="Preview of the Sam’s Grill video"
+                  src={asset('images/video-cover.webp')}
+                  alt="Preview of the Sam’s Grill video — the ultimate comfort food"
                   loading="lazy"
                 />
                 <span className="video-play" aria-hidden="true">
                   ▶
-                </span>
-                <span className="video-poster-label">
-                  PLAY FILM <span aria-hidden="true">↗</span>
                 </span>
               </button>
             )}
@@ -418,7 +437,7 @@ function ProductShowcase() {
             drive back for<span className="red">.</span>
           </h2>
         </div>
-        <a className="text-link" href="#">
+        <a className="button small" href="#">
           See the full menu <Arrow />
         </a>
       </div>
@@ -453,7 +472,7 @@ function ProductShowcase() {
                 <span className="red">.</span>
               </h3>
               <p>{p.description}</p>
-              <a href="#" className="text-link">
+              <a href="#" className="button small">
                 Order now <Arrow />
               </a>
             </div>
@@ -538,11 +557,33 @@ function Testimonials() {
           <h2>
             Our towns,
             <br />
-            in their
-            <br />
+            in their <br />
             own words<span className="red">.</span>
           </h2>
-          <p>Google reviews</p>
+          <p className="review-google">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              />
+              <path
+                fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              />
+              <path
+                fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              />
+            </svg>
+            Google reviews
+            <strong>
+              4.4<i aria-hidden="true">★</i>
+            </strong>
+          </p>
           <span className="review-mark" aria-hidden="true">
             “
           </span>
@@ -565,16 +606,16 @@ function Testimonials() {
             <span>
               0{active + 1} <span className="divider">/ 03</span>
             </span>
-            <div className="flex gap-3">
+            <div className="review-nav">
               <button
-                className="circle-button"
+                className="circle-button circle-button-prev"
                 aria-label="Previous review"
                 onClick={() => setActive((active + 2) % 3)}
               >
                 ←
               </button>
               <button
-                className="circle-button"
+                className="circle-button circle-button-next"
                 aria-label="Next review"
                 onClick={() => setActive((active + 1) % 3)}
               >
@@ -602,9 +643,17 @@ function Locations() {
         </a>
       </div>
       <div className="town-grid">
-        {towns.map((town, i) => (
+        {towns.map((town) => (
           <a href="#" className="town reveal" key={town}>
-            <span className="town-no">{String(i + 1).padStart(2, '0')}</span>
+            <span className="town-no" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  strokeWidth="1.6"
+                  d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"
+                />
+                <circle cx="12" cy="9.5" r="2.4" strokeWidth="1.6" />
+              </svg>
+            </span>
             <span>
               {town}
               {town === 'Hearst' && <small>Coming soon</small>}
@@ -690,7 +739,7 @@ function Footer() {
           <br />
           everything else<span className="red">.</span>
         </h2>
-        <a href="#" className="button">
+        <a href="#" className="button small">
           Order now <Arrow />
         </a>
         <FoodCutout className="final-burger" />
@@ -760,7 +809,7 @@ function Footer() {
             Sam’s Grill © {new Date().getFullYear()}.<br />
             Developed by{' '}
             <a
-              href="https://shivantra.com"
+              href="https://www.shivantra.com/?utm_source=samsgrill.ca&utm_medium=referral&utm_campaign=client_footer"
               target="_blank"
               rel="noopener noreferrer"
               className="red"
@@ -937,14 +986,22 @@ function Home() {
           className="brand-strip"
           aria-label="Fresh, homemade, proudly Canadian"
         >
-          <span>HAND-PRESSED BURGERS</span>
-          <b>✦</b>
-          <span>FRESH-CUT FRIES</span>
-          <b>✦</b>
-          <span>REAL QUÉBEC CURDS</span>
-          <b>✦</b>
-          <span>PROUDLY CANADIAN</span>
-          <b>✦</b>
+          <div className="brand-strip-track">
+            {[0, 1, 2, 3].map((rep) => (
+              <span
+                className="brand-strip-group"
+                key={rep}
+                aria-hidden={rep > 0 || undefined}
+              >
+                {brandItems.map((item) => (
+                  <span className="brand-strip-item" key={item}>
+                    <span>{item}</span>
+                    <b aria-hidden="true">✦</b>
+                  </span>
+                ))}
+              </span>
+            ))}
+          </div>
         </div>
         <AboutSams />
         <ProductShowcase />

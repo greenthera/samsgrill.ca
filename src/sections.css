@@ -58,6 +58,55 @@
   margin: 26px 0;
 }
 
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 0;
+  padding-top: 28px;
+  border-top: 1px solid #11111118;
+}
+
+.about-stats > div {
+  max-width: 190px;
+  padding-right: 36px;
+  margin-right: 36px;
+  border-right: 1px solid #11111115;
+}
+
+.about-stats > div:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: none;
+}
+
+.about-stats strong {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(38px, 3.6vw, 54px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 0.95;
+  color: var(--red);
+}
+
+.about-stats strong i {
+  font-style: normal;
+  font-size: 0.5em;
+  vertical-align: 0.2em;
+  margin-left: 2px;
+}
+
+.about-stats span {
+  display: block;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: #777;
+}
+
 .video-section {
   background: #101010;
   color: white;
@@ -75,6 +124,8 @@
   aspect-ratio: 16 / 9;
   position: relative;
   background: #000;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .video-frame iframe,
@@ -191,8 +242,11 @@
 
 .contact-visual {
   overflow: hidden;
-  align-self: stretch;
-  min-height: 450px;
+  justify-self: center;
+  align-self: center;
+  width: min(100%, 440px);
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
 
 .contact-visual img {
@@ -231,8 +285,7 @@
   }
 
   .contact-visual {
-    min-height: 0;
-    height: clamp(280px, 55vw, 470px);
+    width: min(80%, 360px);
   }
 }
 
@@ -260,6 +313,21 @@
 
   .about-copy h2 {
     font-size: clamp(35px, 8.3vw, 50px);
+  }
+
+  .about-stats {
+    flex-direction: column;
+    margin: 26px 0 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .about-stats > div {
+    max-width: none;
+    padding: 18px 0;
+    margin-right: 0;
+    border-right: none;
+    border-top: 1px solid #11111118;
   }
 
   .about-copy p,
@@ -311,7 +379,7 @@
 }
 
 .video-intro p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.8;
   margin-top: 24px;
 }

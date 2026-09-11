@@ -271,7 +271,7 @@ img {
   .hero-copy p {
     width: 100%;
     max-width: 500px;
-    font-size: 13px;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -445,7 +445,7 @@ img {
   }
 
   .hero-copy p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .hero-bottom {
@@ -455,8 +455,12 @@ img {
   }
 
   .brand-strip {
-    gap: 24px;
     font-size: 17px;
+  }
+
+  .brand-strip-item {
+    gap: 24px;
+    padding-right: 24px;
   }
 
   .food-stage {

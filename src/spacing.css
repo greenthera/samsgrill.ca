@@ -47,7 +47,8 @@
   margin-top: 20px;
 }
 
-.food-copy .text-link {
+.food-copy .text-link,
+.food-copy .button {
   margin-top: 24px;
 }
 
@@ -169,7 +170,8 @@
     margin-top: 16px;
   }
 
-  .food-copy .text-link {
+  .food-copy .text-link,
+  .food-copy .button {
     margin-top: 20px;
   }
 
