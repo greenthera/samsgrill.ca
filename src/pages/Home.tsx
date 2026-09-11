@@ -273,14 +273,35 @@ function AboutSams() {
         </p>
         <div className="about-stats">
           <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path
+                strokeWidth="1.6"
+                d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"
+              />
+              <circle cx="12" cy="9.5" r="2.4" strokeWidth="1.6" />
+            </svg>
             <strong>{towns.length}</strong>
             <span>towns open</span>
           </div>
           <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                d="M4 6h16M4 12h16M4 18h10"
+              />
+            </svg>
             <strong>41+</strong>
             <span>menu items built on Canadian originals</span>
           </div>
           <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path
+                strokeWidth="1.6"
+                strokeLinejoin="round"
+                d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6L12 17.5l-5.9 3.1 1.3-6.6-4.9-4.6 6.6-.7z"
+              />
+            </svg>
             <strong>
               4.4<i aria-hidden="true">★︎</i>
             </strong>
@@ -341,7 +362,7 @@ function VideoSection() {
               >
                 <img
                   src={asset('images/video-cover.webp')}
-                  alt="Preview of the Sam’s Grill video — the ultimate comfort food"
+                  alt="Sam’s Grill bacon cheeseburger and poutine on a wooden board"
                   loading="lazy"
                 />
                 <span className="video-play" aria-hidden="true">
@@ -413,12 +434,16 @@ function ContactSection() {
           Contact us <Arrow />
         </a>
       </div>
-      <div className="contact-visual">
-        <img
-          src={asset('images/contact.webp')}
-          alt="A phone reading Let’s Talk in a red Sam’s Grill apron pocket"
-          loading="lazy"
-        />
+      <div className="contact-visual-wrap">
+        <div className="contact-visual-bg" aria-hidden="true" />
+        <div className="contact-visual-ring" aria-hidden="true" />
+        <div className="contact-visual">
+          <img
+            src={asset('images/contact.webp')}
+            alt="A phone reading Let’s Talk in a red Sam’s Grill apron pocket"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
   )
